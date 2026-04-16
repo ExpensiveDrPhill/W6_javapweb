@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown &amp; Kodepos</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+        <div class="site-header__inner">
+            <div class="site-brand">W6 JavaScript Web</div>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="../index.html">Home</a>
+                <a href="registration.html">Registration Form</a>
+                <a href="dropdown.html">Dropdown &amp; Kodepos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="section">
+            <p class="section__lead">Page 2 of 2</p>
+            <h1>Dropdown Demo and Kodepos Lookup</h1>
+        </section>
+
+        <section class="section lookup-card">
+            <h2> Product Dropdown Demo</h2>
+
+            <div class="lookup-grid">
+                <div class="field">
+                    <label for="productCategory">Category</label>
+                    <select id="productCategory">
+                        <option value="">Pilih Jenis Produk</option>
+                        <option value="Desktop">Desktop</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Smartphone">Smartphone</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="productBrand">Brand</label>
+                    <select id="productBrand" disabled>
+                        <option value="">Pilih Merk</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="productResult" class="lookup-result">
+                <strong>Selected Brand:</strong>
+                <span id="productResultText"></span>
+            </div>
+        </section>
+
+        <section class="section lookup-card">
+            <h2> Kodepos Lookup</h2>
+            <p class="muted">Pick a province, then a region/city, then a district/area to reveal the postal code.</p>
+
+            <div class="lookup-grid">
+                <div class="field">
+                    <label for="provinsi">Provinsi</label>
+                    <select id="provinsi">
+                        <option value="">-- Pilih Provinsi --</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="kabupaten">Kabupaten/Kota</label>
+                    <select id="kabupaten" disabled>
+                        <option value="">-- Pilih Kabupaten/Kota --</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="kecamatan">Kecamatan / Area</label>
+                    <select id="kecamatan" disabled>
+                        <option value="">-- Pilih Kecamatan --</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="kodepos">Kode Pos</label>
+                    <input type="text" id="kodepos" readonly placeholder="Kode pos muncul di sini" />
+                </div>
+            </div>
+
+            <div id="resultPanel" class="lookup-result">
+                <p class="muted">Hasil pencarian kode pos</p>
+                <strong id="resultKode"></strong>
+                <p id="resultInfo"></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
